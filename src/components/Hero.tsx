@@ -126,7 +126,7 @@ export const Hero = () => {
             <div className='group relative'>
               {/* Main Image Container */}
               <div
-                className={`relative mx-auto aspect-[4/5] max-w-md overflow-hidden rounded-3xl border border-white/10 shadow-2xl`}
+                className={`relative mx-auto aspect-[4/5] max-w-md overflow-hidden rounded-3xl shadow-2xl`}
               >
                 <Image
                   src={
