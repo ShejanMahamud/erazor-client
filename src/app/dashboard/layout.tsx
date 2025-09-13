@@ -1,4 +1,4 @@
-import KBar from '@/components/kbar';
+import ClientKBar from '@/components/kbar/client-wrapper';
 import AppSidebar from '@/components/layout/app-sidebar';
 import Header from '@/components/layout/header';
 import { SidebarInset, SidebarProvider } from '@/components/ui/sidebar';
@@ -17,9 +17,9 @@ export default async function DashboardLayout({
 }) {
   // Persisting the sidebar state in the cookie.
   const cookieStore = await cookies();
-  const defaultOpen = cookieStore.get("sidebar_state")?.value === "true"
+  const defaultOpen = cookieStore.get('sidebar_state')?.value === 'true';
   return (
-    <KBar>
+    <ClientKBar>
       <SidebarProvider defaultOpen={defaultOpen}>
         <AppSidebar />
         <SidebarInset>
@@ -29,6 +29,6 @@ export default async function DashboardLayout({
           {/* page main content ends */}
         </SidebarInset>
       </SidebarProvider>
-    </KBar>
+    </ClientKBar>
   );
 }

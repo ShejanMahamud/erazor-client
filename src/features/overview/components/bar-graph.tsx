@@ -149,11 +149,12 @@ export function BarGraph() {
     setIsClient(true);
   }, []);
 
-  React.useEffect(() => {
-    if (activeChart === 'error') {
-      throw new Error('Mocking Error');
-    }
-  }, [activeChart]);
+  // Commented out error throwing for build stability
+  // React.useEffect(() => {
+  //   if (activeChart === 'error') {
+  //     throw new Error('Mocking Error');
+  //   }
+  // }, [activeChart]);
 
   if (!isClient) {
     return null;
@@ -172,7 +173,7 @@ export function BarGraph() {
           </CardDescription>
         </div>
         <div className='flex'>
-          {['desktop', 'mobile', 'error'].map((key) => {
+          {['desktop', 'mobile'].map((key) => {
             const chart = key as keyof typeof chartConfig;
             if (!chart || total[key as keyof typeof total] === 0) return null;
             return (
