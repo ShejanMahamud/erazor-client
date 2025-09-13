@@ -1,7 +1,5 @@
-import { Footer } from '@/components/Footer';
 import Providers from '@/components/layout/providers';
 import ThemeProvider from '@/components/layout/ThemeToggle/theme-provider';
-import { MainNavbar } from '@/components/MainNavbar';
 import ClickSpark from '@/components/ui/click-spark';
 import { Toaster } from '@/components/ui/sonner';
 import { fontVariables } from '@/lib/font';
@@ -93,9 +91,7 @@ export default async function RootLayout({
                 sparkCount={8}
                 duration={400}
               >
-                <MainNavbar />
                 {children}
-                <Footer />
               </ClickSpark>
             </Providers>
           </ThemeProvider>
