@@ -57,7 +57,13 @@ export function MainNavbar() {
           <NavItems items={navItems} />
           <div className='flex items-center gap-4'>
             {user.isSignedIn ? (
-              <UserButton />
+              <UserButton.MenuItems>
+                <UserButton.Link
+                  label='Dashboard'
+                  labelIcon={<DotIcon />}
+                  href='/dashboard/overview'
+                />
+              </UserButton.MenuItems>
             ) : (
               <div className='flex items-center gap-4'>
                 <NavbarButton variant='secondary' href='/auth/sign-in'>
@@ -99,9 +105,9 @@ export function MainNavbar() {
               {user.isSignedIn ? (
                 <UserButton.MenuItems>
                   <UserButton.Link
-                    label='Create organization'
+                    label='Dashboard'
                     labelIcon={<DotIcon />}
-                    href='/create-organization'
+                    href='/dashboard/overview'
                   />
                 </UserButton.MenuItems>
               ) : (
