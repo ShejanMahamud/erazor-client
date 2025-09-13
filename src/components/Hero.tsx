@@ -24,8 +24,8 @@ export const Hero = () => {
       {/* Background Effects */}
       <HeroBackground />
 
-      <div className='container mx-auto px-6 pb-16 pl-32'>
-        <div className='grid min-h-[80vh] items-center gap-12 lg:grid-cols-2'>
+      <div className='container mx-auto px-6 pb-16 lg:pl-32'>
+        <div className='grid min-h-[80vh] grid-cols-1 items-center gap-12 lg:grid-cols-2'>
           {/* Left Column - Content */}
           <div className='space-y-4'>
             {/* Simple Badge */}
@@ -54,7 +54,7 @@ export const Hero = () => {
 
             {/* Clean Main Heading */}
             <div className='space-y-4'>
-              <h1 className='text-6xl leading-[1.1] font-bold tracking-tight lg:text-7xl'>
+              <h1 className='text-5xl leading-[1.1] font-bold tracking-tight lg:text-7xl'>
                 Remove
                 <br />
                 <PointerHighlight>
@@ -112,7 +112,7 @@ export const Hero = () => {
               </Button>
             </div>
 
-            <div className='flex items-center gap-2'>
+            <div className='flex flex-col items-start gap-2 lg:flex-row lg:items-center'>
               <AvatarCircles numPeople={99} avatarUrls={avatars} />
               <span className='text-foreground/50 text-sm'>
                 Trusted by 10,000+ users worldwide
@@ -189,7 +189,7 @@ export const Hero = () => {
                   text={`${imageState === 'before' ? 'ORIGINAL*IMAGE*' : 'BACKGROUND*REMOVED*'}`}
                   onHover='speedUp'
                   spinDuration={20}
-                  className='text-xs'
+                  className='text-2xl lg:text-xs'
                 />
               </div>
             </div>

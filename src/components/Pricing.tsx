@@ -284,7 +284,7 @@ export const Pricing = () => {
 
   if (loading) {
     return (
-      <section className='my-32 flex flex-col items-center gap-10 py-10'>
+      <section className='my-32 flex flex-col items-center gap-10 px-10 py-10'>
         {/* Header Skeleton */}
         <div className='animate-pulse text-center'>
           <div className='mx-auto mb-4 h-8 w-64 rounded-lg bg-gray-200 dark:bg-gray-700'></div>
@@ -373,7 +373,7 @@ export const Pricing = () => {
   }
 
   return (
-    <section className='my-24 flex flex-col items-center gap-10 py-10'>
+    <section className='my-24 flex flex-col items-center gap-10 px-5 py-10'>
       {/* Section Header */}
       <PricingHeader
         title='Plans and Pricing'
